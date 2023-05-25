@@ -29,7 +29,7 @@ export const Card = React.memo(({ question, showOption, updateQuestionStatus }: 
   };
   return (
     <>
-      <div onClick={switchShowOption} className="w-96 border rounded-md cursor-pointer bg-white shadow-lg">
+      <div onClick={switchShowOption} className="w-80 border rounded-md cursor-pointer bg-white shadow-lg">
         <div className="flex justify-end">
           <div onClick={() => handleReject()} className="m-1 bg-red-500 w-3 h-3 rounded-lg"></div>
         </div>

@@ -12,9 +12,9 @@ type Props = {
 export const DecidedCardCol = React.memo(({ questions, status, updateQuestionStatus }: Props) => {
   return (
     <>
-      {status === "yes" && <div className="text-2xl bg-red-300 w-96">はい</div>}
-      {status === "neutral" && <div className="text-2xl bg-green-300 w-96">どちらでもない</div>}
-      {status === "no" && <div className="text-2xl bg-blue-300 w-96">いいえ</div>}
+      {status === "yes" && <div className="text-2xl bg-red-300">はい</div>}
+      {status === "neutral" && <div className="text-2xl bg-green-300">どちらでもない</div>}
+      {status === "no" && <div className="text-2xl bg-blue-300">いいえ</div>}
       {questions.map((question, idx) => {
         return (
           <div key={"decided" + idx} className="m-1">

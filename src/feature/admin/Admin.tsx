@@ -37,13 +37,16 @@ export const AdminComponent = () => {
           />
         </div>
       </div>
-
-      <div className="mt-16 ml-36">
-        <div className="text-2xl">回答まち</div>
-        <WaitingCardCol
-          questions={questions.filter((elm) => elm.status === "waiting")}
-          updateQuestionStatus={updateQuestionStatus}
-        />
+      <div className="flex justify-center mt-8">
+        <div className="mx-2 w-80">
+          <div className="text-2xl">回答まち</div>
+          <WaitingCardCol
+            questions={questions.filter((elm) => elm.status === "waiting")}
+            updateQuestionStatus={updateQuestionStatus}
+          />
+        </div>
+        <div className="mx-6 bg-blue-300 invisible p-4 w-80 rounded-md"></div>
+        <div className="mx-6 bg-green-300 invisible p-4 w-80 rounded-md"></div>
       </div>
 
       <div className="mt-[600px]">
