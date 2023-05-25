@@ -13,12 +13,9 @@ export const WaitingCardCol = React.memo(({ questions, updateQuestionStatus }: P
     <>
       {questions.map((question, idx) => {
         return (
-          <Card
-            key={idx}
-            showOption={true}
-            question={question}
-            updateQuestionStatus={updateQuestionStatus}
-          ></Card>
+          <div key={"waiting" + idx} className="m-1">
+            <Card showOption={true} question={question} updateQuestionStatus={updateQuestionStatus}></Card>
+          </div>
         );
       })}
     </>

@@ -17,12 +17,9 @@ export const DecidedCardCol = React.memo(({ questions, status, updateQuestionSta
       {status === "no" && <div className="text-2xl bg-blue-300 w-96">いいえ</div>}
       {questions.map((question, idx) => {
         return (
-          <Card
-            key={idx}
-            showOption={false}
-            question={question}
-            updateQuestionStatus={updateQuestionStatus}
-          ></Card>
+          <div key={"decided" + idx} className="m-1">
+            <Card showOption={false} question={question} updateQuestionStatus={updateQuestionStatus}></Card>
+          </div>
         );
       })}
     </>

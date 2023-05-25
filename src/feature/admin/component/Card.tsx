@@ -29,7 +29,7 @@ export const Card = React.memo(({ question, showOption, updateQuestionStatus }: 
   };
   return (
     <>
-      <div onClick={switchShowOption} className="w-96 border-2 rounded-md cursor-pointer bg-white">
+      <div onClick={switchShowOption} className="w-96 border rounded-md cursor-pointer bg-white shadow-lg">
         <div className="flex justify-end">
           <div onClick={() => handleReject()} className="m-1 bg-red-500 w-3 h-3 rounded-lg"></div>
         </div>
@@ -40,12 +40,12 @@ export const Card = React.memo(({ question, showOption, updateQuestionStatus }: 
         {isShowOption && (
           <div className="flex">
             <div className="mx-1">
-              <button className="bg-blue-300 rounded px-1" onClick={() => handleYes()}>
+              <button className="bg-red-300 rounded px-1" onClick={() => handleYes()}>
                 はい
               </button>
             </div>
             <div className="mx-1">
-              <button className="bg-red-300 rounded px-1" onClick={() => handleNo()}>
+              <button className="bg-blue-300 rounded px-1" onClick={() => handleNo()}>
                 いいえ
               </button>
             </div>

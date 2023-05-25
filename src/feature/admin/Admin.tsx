@@ -14,7 +14,7 @@ export const AdminComponent = () => {
 
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-8">
         <div className="mx-2 bg-red-300 p-2 rounded-md">
           <DecidedCardCol
             status="yes"
@@ -38,7 +38,7 @@ export const AdminComponent = () => {
         </div>
       </div>
 
-      <div className="mt-16 ml-5">
+      <div className="mt-16 ml-36">
         <div className="text-2xl">回答まち</div>
         <WaitingCardCol
           questions={questions.filter((elm) => elm.status === "waiting")}

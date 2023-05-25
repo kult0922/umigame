@@ -13,12 +13,9 @@ export const RejectedCardCol = React.memo(({ questions, updateQuestionStatus }: 
     <>
       {questions.map((question, idx) => {
         return (
-          <Card
-            key={idx}
-            showOption={true}
-            question={question}
-            updateQuestionStatus={updateQuestionStatus}
-          ></Card>
+          <div key={"Rejected" + idx} className="m-1">
+            <Card showOption={true} question={question} updateQuestionStatus={updateQuestionStatus}></Card>
+          </div>
         );
       })}
     </>
